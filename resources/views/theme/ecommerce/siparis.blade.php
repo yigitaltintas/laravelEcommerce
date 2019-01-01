@@ -1,5 +1,5 @@
 @extends('theme.ecommerce.layouts.master')
-@section('title', 'Siparisler')
+@section('title', 'Siparis Detay')
 
 @section('content')
     <div id="content" class="site-content">
@@ -18,7 +18,7 @@
                         <div class="type-page hentry">
                             <header class="entry-header">
                                 <div class="page-header-caption">
-                                    <h1 class="entry-title">Siparisler</h1>
+                                    <h1 class="entry-title">Siparis Detayi</h1>
                                 </div>
                             </header>
                             <!-- .entry-header -->
