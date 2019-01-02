@@ -1,65 +1,35 @@
 @extends('theme.ecommerce.layouts.master')
-@section('title', 'Kategoriler')
+@section('title', $kategori -> kategori_adi)
 
 @section('content')
     <div id="content" class="site-content" tabindex="-1">
         <div class="col-full">
             <div class="row">
                 <nav class="woocommerce-breadcrumb">
-                    <a href="home-v1.html">Home</a>
+                    <a href="{{ route('anasayfa') }}">Anasayfa</a>
                     <span class="delimiter">
                                 <i class="tm tm-breadcrumbs-arrow-right"></i>
-                            </span>Computers &amp; Laptops
+                            </span>{{ $kategori -> kategori_adi  }}
                 </nav>
                 <!-- .woocommerce-breadcrumb -->
                 <div id="primary" class="content-area">
                     <main id="main" class="site-main">
                         <section class="section-product-categories">
                             <header class="section-header">
-                                <h1 class="woocommerce-products-header__title page-title">Computers &amp; Laptops Categories</h1>
+                                <h1 class="woocommerce-products-header__title page-title">{{ $kategori -> kategori_adi }}</h1>
                             </header>
                             <div class="woocommerce columns-5">
                                 <div class="product-loop-categories">
-                                    <div class="product-category product first">
-                                        <a href="product-category.html">
-                                            <img src="assets/images/category/21.png" alt="Ultrabooks" width="224" height="197">
-                                            <h2 class="woocommerce-loop-category__title"> Digital Cameras
-                                                <mark class="count">(5)</mark>
-                                            </h2>
-                                        </a>
-                                    </div>
+                                    @foreach($alt_kategoriler as $alt_kategori)
                                     <div class="product-category product">
-                                        <a href="product-category.html">
-                                            <img src="assets/images/category/17.png" alt="Ultrabooks" width="224" height="197">
-                                            <h2 class="woocommerce-loop-category__title"> Audio & Music
+                                        <a href="{{ route('kategori', $alt_kategori -> slug)}}">
+                                            <img src="assets/images/category/21.png" alt="{{ $alt_kategori -> kategori_adi }}" width="224" height="197">
+                                            <h2 class="woocommerce-loop-category__title"> {{ $alt_kategori -> kategori_adi }}
                                                 <mark class="count">(5)</mark>
                                             </h2>
                                         </a>
                                     </div>
-                                    <div class="product-category product last">
-                                        <a href="product-category.html">
-                                            <img src="assets/images/category/23.png" alt="Ultrabooks" width="224" height="197">
-                                            <h2 class="woocommerce-loop-category__title"> Headphones
-                                                <mark class="count">(5)</mark>
-                                            </h2>
-                                        </a>
-                                    </div>
-                                    <div class="product-category product">
-                                        <a href="product-category.html">
-                                            <img src="assets/images/category/25.png" alt="Ultrabooks" width="224" height="197">
-                                            <h2 class="woocommerce-loop-category__title"> Home Theater & Audio
-                                                <mark class="count">(5)</mark>
-                                            </h2>
-                                        </a>
-                                    </div>
-                                    <div class="product-category product last">
-                                        <a href="product-category.html">
-                                            <img src="assets/images/category/18.png" alt="Ultrabooks" width="224" height="197">
-                                            <h2 class="woocommerce-loop-category__title"> Cells & Tablets
-                                                <mark class="count">(5)</mark>
-                                            </h2>
-                                        </a>
-                                    </div>
+                                    @endforeach
                                 </div>
                                 <!-- .product-loop-categories -->
                             </div>
