@@ -23,5 +23,9 @@ class Urun extends Model
     public function kategoriler(){
         return $this->belongsToMany('App\Models\Kategori', 'kategori_urun');
     }
+
+    public function detay(){
+        return $this->hasOne('App\Models\UrunDetay');
+    }
 }
 
