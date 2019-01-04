@@ -13,4 +13,11 @@ class UrunController extends Controller
         $kategoriler = $urun->kategoriler()->distinct()->get();
         return view(config('app.theme_path').'.urun', compact('urun', 'kategoriler'));
     }
+
+    public function ara(){
+        $s = request()->input('search');
+        $urunler = Urun::where('urun_adi', 'like', "%$s%")->get();
+        request()->flash();
+        return view(config('app.theme_path').'.arama', compact('urunler' ));
+    }
 }

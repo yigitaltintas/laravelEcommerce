@@ -2,48 +2,24 @@
     <div class="col-full">
         <ul id="menu-top-bar-left" class="nav menu-top-bar-left">
             <li class="menu-item animate-dropdown">
-                <a title="TechMarket eCommerce - Always free delivery" href="contact-v1.html">TechMarket eCommerce &#8211; Always free delivery</a>
+                <a title="TechMarket eCommerce - Always free delivery" href="{{ route('anasayfa') }}">{{ config('app.name') }}</a>
             </li>
             <li class="menu-item animate-dropdown">
-                <a title="Quality Guarantee of products" href="shop.html">Quality Guarantee of products</a>
+                <a title="Quality Guarantee of products" href="shop.html">Garanti Koşulları</a>
             </li>
             <li class="menu-item animate-dropdown">
-                <a title="Fast returnings program" href="track-your-order.html">Fast returnings program</a>
-            </li>
-            <li class="menu-item animate-dropdown">
-                <a title="No additional fees" href="contact-v2.html">No additional fees</a>
+                <a title="Fast returnings program" href="track-your-order.html">İade İşlemleri</a>
             </li>
         </ul>
         <!-- .nav -->
         <ul id="menu-top-bar-right" class="nav menu-top-bar-right">
             <li class="hidden-sm-down menu-item animate-dropdown">
                 <a title="Track Your Order" href="track-your-order.html">
-                    <i class="tm tm-order-tracking"></i>Track Your Order</a>
-            </li>
-            <li class="menu-item menu-item-has-children animate-dropdown dropdown">
-                <a title="Dollar (US)" data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <i class="tm tm-dollar"></i>Dollar (US)
-                    <span class="caret"></span>
-                </a>
-                <ul role="menu" class="dropdown-menu">
-                    <li class="menu-item animate-dropdown">
-                        <a title="AUD" href="#">AUD</a>
-                    </li>
-                    <li class="menu-item animate-dropdown">
-                        <a title="INR" href="#">INR</a>
-                    </li>
-                    <li class="menu-item animate-dropdown">
-                        <a title="AED" href="#">AED</a>
-                    </li>
-                    <li class="menu-item animate-dropdown">
-                        <a title="SGD" href="#">SGD</a>
-                    </li>
-                </ul>
-                <!-- .dropdown-menu -->
+                    <i class="tm tm-order-tracking"></i>Kargom Nerde?</a>
             </li>
             <li class="menu-item">
                 <a title="My Account" href="login-and-register.html">
-                    <i class="tm tm-login-register"></i>Register or Sign in</a>
+                    <i class="tm tm-login-register"></i>Giriş Yap</a>
             </li>
         </ul>
         <!-- .nav -->
@@ -55,7 +31,7 @@
     <div class="col-full desktop-only">
         <div class="row">
             <div class="site-branding">
-                <a href="home-v1.html" class="custom-logo-link" rel="home">
+                <a href="{{ route('anasayfa') }}" class="custom-logo-link" rel="home">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 28">
                         <defs>
                             <style>
@@ -99,7 +75,7 @@
             <div id="departments-menu" class="dropdown departments-menu">
                 <button class="btn dropdown-toggle btn-block" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="tm tm-departments-thin"></i>
-                    <span>All Departments</span>
+                    <span>Tüm Kategoriler</span>
                 </button>
                 <ul id="menu-departments-menu" class="dropdown-menu yamm departments-menu-dropdown">
                     <li class="highlight menu-item animate-dropdown">
@@ -567,13 +543,14 @@
                 </ul>
             </div>
             <!-- .departments-menu -->
-            <form class="navbar-search" method="get" action="home-v1.html">
-                <label class="sr-only screen-reader-text" for="search">Search for:</label>
+            <form class="navbar-search" method="post" action="{{ route('urun-ara') }}">
+                {{ csrf_field() }}
+                <label class="sr-only screen-reader-text" for="search">Ara:</label>
                 <div class="input-group">
-                    <input type="text" id="search" class="form-control search-field product-search-field" dir="ltr" value="" name="s" placeholder="Search for products" />
+                    <input type="text" id="search" class="form-control search-field product-search-field" dir="ltr" name="search" value="{{ old('search') }}" placeholder="ürün arama" />
                     <div class="input-group-addon search-categories popover-header">
                         <select name='product_cat' id='product_cat' class='postform resizeselect'>
-                            <option value='0' selected='selected'>All Categories</option>
+                            <option value='0' selected='selected'>Tüm Kategoriler</option>
                             <option class="level-0" value="television">Televisions</option>
                             <option class="level-0" value="home-theater-audio">Home Theater &amp; Audio</option>
                             <option class="level-0" value="headphones">Headphones</option>
@@ -602,7 +579,7 @@
                         <input type="hidden" id="search-param" name="post_type" value="product" />
                         <button type="submit" class="btn btn-primary">
                             <i class="fa fa-search"></i>
-                            <span class="search-btn">Search</span>
+                            <span class="search-btn">Ara</span>
                         </button>
                     </div>
                     <!-- .input-group-btn -->
@@ -634,8 +611,9 @@
                         <i class="tm tm-shopping-bag"></i>
                         <span class="count">2</span>
                         <span class="amount">
-                                        <span class="price-label">Your Cart</span>&#036;136.99</span>
+                                        <span class="price-label">Sepet</span>136.99₺</span>
                     </a>
+
                     <ul class="dropdown-menu dropdown-menu-mini-cart">
                         <li>
                             <div class="widget woocommerce widget_shopping_cart">
@@ -1468,8 +1446,8 @@
                     <div class="site-search">
                         <div class="widget woocommerce widget_product_search">
                             <form role="search" method="get" class="woocommerce-product-search" action="home-v1.html">
-                                <label class="screen-reader-text" for="woocommerce-product-search-field-0">Search for:</label>
-                                <input type="search" id="woocommerce-product-search-field-0" class="search-field" placeholder="Search products&hellip;" value="" name="s" />
+                                <label class="screen-reader-text" for="woocommerce-product-search-field-0">Arama</label>
+                                <input type="search" id="woocommerce-product-search-field-0" class="search-field" placeholder="Ürün ara&hellip;" value="" name="s" />
                                 <input type="submit" value="Search" />
                                 <input type="hidden" name="post_type" value="product" />
                             </form>

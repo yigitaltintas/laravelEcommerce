@@ -6,6 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateKategoriTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
