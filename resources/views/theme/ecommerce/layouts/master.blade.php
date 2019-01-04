@@ -6,7 +6,7 @@
     @include('theme.ecommerce.layouts.partials.head')
     @yield('head')
 </head>
-<body class="woocommerce-active page-template-template-homepage-v11">
+<body class="@yield('body', 'woocommerce-active page-template-template-homepage-v11')">
 <div id="page" class="hfeed site">
     @include('theme.ecommerce.layouts.partials.navbar')
 

@@ -18,5 +18,10 @@ class Urun extends Model
     const CREATED_AT = 'olusturulma_tarihi';
     const UPDATED_AT = 'guncellenme_tarihi';
     const DELETED_AT = 'silinme_tarihi';
+
+
+    public function kategoriler(){
+        return $this->belongsToMany('App\Models\Kategori', 'kategori_urun');
+    }
 }
 

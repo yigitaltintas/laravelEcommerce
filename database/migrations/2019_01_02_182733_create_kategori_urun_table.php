@@ -13,6 +13,7 @@ class CreateKategoriUrunTable extends Migration
      */
     public function up()
     {
+
         Schema::create('kategori_urun', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('kategori_id')->unsigned();

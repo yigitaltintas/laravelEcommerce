@@ -151,7 +151,7 @@
                                         @foreach($kategoriler as $kategori)
                                         <div class="product-category product">
                                             <a href="{{ route('kategori', $kategori -> slug) }}">
-                                                <img width="300" height="300" alt="{{ $kategori -> kategori_adi  }}" src="assets/images/category/16.png">
+                                                <img width="300" height="300" alt="{{ $kategori -> kategori_adi  }}" src="https://via.placeholder.com/180x180">
                                                 <h2 class="woocommerce-loop-category__title"> {{ $kategori -> kategori_adi  }} </h2>
                                             </a>
                                         </div>
