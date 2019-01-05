@@ -31,8 +31,12 @@ Route::get('/siparisler/{id}', 'SiparisController@detay')->name('siparis');
 
 Route::group(['prefix' => 'kullanici'], function(){
 
-    Route::get('/giris', 'KullaniciController@giris_form')->name('kullanci.giris');
+    Route::get('/giris', 'KullaniciController@giris_form')->name('kullanici.giris');
 
-    Route::get('/kayit', 'KullaniciController@kayit_form')->name('kullanci.kayit');
+    Route::post('/giris', 'KullaniciController@giris');
+
+    Route::get('/kayit', 'KullaniciController@kayit_form')->name('kullanici.kayit');
+
+    Route::post('/kayit', 'KullaniciController@kaydol');
 
 });

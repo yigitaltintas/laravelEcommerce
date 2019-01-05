@@ -6,10 +6,10 @@
     <div class="col-full">
         <div class="row">
             <nav class="woocommerce-breadcrumb">
-                <a href="home-v1.html">Home</a>
+                <a href="{{ route('anasayfa') }}">Anasayfa</a>
                 <span class="delimiter">
                                 <i class="tm tm-breadcrumbs-arrow-right"></i>
-                            </span>My Account
+                            </span>Kayit Ol
             </nav>
             <!-- .woocommerce-breadcrumb -->
             <div id="primary" class="content-area">
@@ -21,33 +21,42 @@
                                     <div class="col-12 ">
                                         <div class="col-md-8">
                                             <h2>Kayıt Ol</h2>
-                                            <form class="register" method="post">
+                                            @include('theme.ecommerce.layouts.partials.error')
+                                            <form class="register" method="post" action="{{ route('kullanici.kayit') }}">
+                                                {{ csrf_field() }}
                                                 <p class="before-register-text">
-                                                    Create new account today to reap the benefits of a personalized shopping experience. Praesent placerat, est sed aliquet finibus.
                                                 </p>
                                                 <p class="form-row form-row-wide">
-                                                    <label for="reg_email">Email address
+                                                    <label>Ad Soyad
                                                         <span class="required">*</span>
                                                     </label>
-                                                    <input type="email" value="" id="reg_email" name="email" class="woocommerce-Input woocommerce-Input--text input-text">
+                                                    <input type="text" value="" id="adsoyad" name="adsoyad" value="{{ old('adsoyad') }}" class="woocommerce-Input woocommerce-Input--text input-text" required>
                                                 </p>
+
                                                 <p class="form-row form-row-wide">
-                                                    <label for="reg_password">Password
+                                                    <label for="reg_email">E-mail
                                                         <span class="required">*</span>
                                                     </label>
-                                                    <input type="password" id="reg_password" name="password" class="woocommerce-Input woocommerce-Input--text input-text">
+                                                    <input type="email" value="" id="email" name="email" value="{{ old('email') }}" class="woocommerce-Input woocommerce-Input--text input-text" required>
                                                 </p>
+
+                                                <p class="form-row form-row-wide">
+                                                    <label for="reg_password">Sifre
+                                                        <span class="required">*</span>
+                                                    </label>
+                                                    <input type="password" id="reg_password" name="sifre" class="woocommerce-Input woocommerce-Input--text input-text" required>
+                                                </p>
+
+                                                <p class="form-row form-row-wide">
+                                                    <label for="reg_password">Sifre tekrar
+                                                        <span class="required">*</span>
+                                                    </label>
+                                                    <input type="password" id="reg_password" name="sifre_confirmation" class="woocommerce-Input woocommerce-Input--text input-text" required>
+                                                </p>
+
                                                 <p class="form-row">
-                                                    <input type="submit" class="woocommerce-Button button" name="register" value="Register" />
+                                                    <input type="submit" class="woocommerce-Button button" value="Kaydol" />
                                                 </p>
-                                                <div class="register-benefits">
-                                                    <h3>Sign up today and you will be able to :</h3>
-                                                    <ul>
-                                                        <li>Speed your way through checkout</li>
-                                                        <li>Track your orders easily</li>
-                                                        <li>Keep a record of all your purchases</li>
-                                                    </ul>
-                                                </div>
                                             </form>
                                             <!-- .register -->
                                         </div>

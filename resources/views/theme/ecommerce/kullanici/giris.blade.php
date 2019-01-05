@@ -6,10 +6,10 @@
         <div class="col-full">
             <div class="row">
                 <nav class="woocommerce-breadcrumb">
-                    <a href="home-v1.html">Home</a>
+                    <a href="{{ route('anasayfa') }}">Anasayfa</a>
                     <span class="delimiter">
                                 <i class="tm tm-breadcrumbs-arrow-right"></i>
-                            </span>My Account
+                            </span>Giris Yap
                 </nav>
                 <!-- .woocommerce-breadcrumb -->
                 <div id="primary" class="content-area">
@@ -20,19 +20,20 @@
                                     <div class="customer-login-form">
                                         <div class="col-12 ">
                                             <div class="col-md-8">
-                                                <h2>Kayıt Ol</h2>
-                                                <form class="register" method="post">
+                                                <h2>Giris Yap</h2>
+                                                <form  method="post" action=" {{ route('kullanici.giris') }} ">
+                                                    {{ csrf_field() }}
                                                     <p class="before-register-text">
                                                         Create new account today to reap the benefits of a personalized shopping experience. Praesent placerat, est sed aliquet finibus.
                                                     </p>
                                                     <p class="form-row form-row-wide">
-                                                        <label for="reg_email">Email address
+                                                        <label for="reg_email">Email
                                                             <span class="required">*</span>
                                                         </label>
                                                         <input type="email" value="" id="reg_email" name="email" class="woocommerce-Input woocommerce-Input--text input-text">
                                                     </p>
                                                     <p class="form-row form-row-wide">
-                                                        <label for="reg_password">Password
+                                                        <label for="reg_password">Parola
                                                             <span class="required">*</span>
                                                         </label>
                                                         <input type="password" id="reg_password" name="password" class="woocommerce-Input woocommerce-Input--text input-text">
@@ -40,14 +41,7 @@
                                                     <p class="form-row">
                                                         <input type="submit" class="woocommerce-Button button" name="register" value="Register" />
                                                     </p>
-                                                    <div class="register-benefits">
-                                                        <h3>Sign up today and you will be able to :</h3>
-                                                        <ul>
-                                                            <li>Speed your way through checkout</li>
-                                                            <li>Track your orders easily</li>
-                                                            <li>Keep a record of all your purchases</li>
-                                                        </ul>
-                                                    </div>
+
                                                 </form>
                                                 <!-- .register -->
                                             </div>

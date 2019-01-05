@@ -2,7 +2,8 @@
     <div class="col-full">
         <ul id="menu-top-bar-left" class="nav menu-top-bar-left">
             <li class="menu-item animate-dropdown">
-                <a title="TechMarket eCommerce - Always free delivery" href="{{ route('anasayfa') }}">{{ config('app.name') }}</a>
+                <a title="Track Your Order" href="track-your-order.html">
+                    <i class="tm tm-order-tracking"></i>Kargom Nerde?</a>
             </li>
             <li class="menu-item animate-dropdown">
                 <a title="Quality Guarantee of products" href="shop.html">Garanti Koşulları</a>
@@ -13,14 +14,25 @@
         </ul>
         <!-- .nav -->
         <ul id="menu-top-bar-right" class="nav menu-top-bar-right">
+            @guest
             <li class="hidden-sm-down menu-item animate-dropdown">
-                <a title="Track Your Order" href="track-your-order.html">
-                    <i class="tm tm-order-tracking"></i>Kargom Nerde?</a>
+                <a title="Kayit Ol" href="{{ route('kullanici.kayit') }}">
+                    <i class="tm tm-arrow-right-products-header"></i>Kayit Ol</a>
             </li>
+
             <li class="menu-item">
-                <a title="My Account" href="login-and-register.html">
-                    <i class="tm tm-login-register"></i>Giriş Yap</a>
+
+                <a title="Giris Yap" href="{{ route('kullanici.giris') }}">
+                    <i class="tm tm-login-register"></i>Giris Yap</a>
             </li>
+            @endguest
+
+            @auth
+            <li class="menu-item">
+                <a title="My Account" href="#">
+                    <i class="tm tm-login-register"></i>Hi</a>
+            </li>
+            @endauth
         </ul>
         <!-- .nav -->
     </div>
