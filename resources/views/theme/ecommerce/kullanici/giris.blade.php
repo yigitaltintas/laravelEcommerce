@@ -21,10 +21,10 @@
                                         <div class="col-12 ">
                                             <div class="col-md-8">
                                                 <h2>Giris Yap</h2>
-                                                <form  method="post" action=" {{ route('kullanici.giris') }} ">
+                                                @include('theme.ecommerce.layouts.partials.error')
+                                                <form  method="POST" action=" {{ route('kullanici.giris') }} ">
                                                     {{ csrf_field() }}
                                                     <p class="before-register-text">
-                                                        Create new account today to reap the benefits of a personalized shopping experience. Praesent placerat, est sed aliquet finibus.
                                                     </p>
                                                     <p class="form-row form-row-wide">
                                                         <label for="reg_email">Email
@@ -36,10 +36,10 @@
                                                         <label for="reg_password">Parola
                                                             <span class="required">*</span>
                                                         </label>
-                                                        <input type="password" id="reg_password" name="password" class="woocommerce-Input woocommerce-Input--text input-text">
+                                                        <input type="password" id="reg_password" name="sifre" class="woocommerce-Input woocommerce-Input--text input-text">
                                                     </p>
                                                     <p class="form-row">
-                                                        <input type="submit" class="woocommerce-Button button" name="register" value="Register" />
+                                                        <input type="submit" class="woocommerce-Button button" value="Giriş Yap" />
                                                     </p>
 
                                                 </form>

@@ -30,7 +30,7 @@
             @auth
             <li class="menu-item">
                 <a title="My Account" href="#">
-                    <i class="tm tm-login-register"></i>Hi</a>
+                    <i class="tm tm-login-register"></i>Merhaba</a>
             </li>
             @endauth
         </ul>

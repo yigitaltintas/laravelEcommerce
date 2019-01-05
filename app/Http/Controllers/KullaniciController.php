@@ -18,6 +18,24 @@ class KullaniciController extends Controller
 
     public function giris(){
 
+        $this->validate(request(), [
+            'email' => 'required|email' ,
+            'sifre' => 'required|'
+        ]);
+
+        if(auth()->attempt(['email' => request('email'), 'password' => request('sifre')])){
+
+            request()->session()->regenerate();
+            return redirect()->intended('/');
+
+        }else {
+
+            $errors = ['email' => 'Kullanıcı bulunamadı.'];
+            return back()->with($errors);
+
+        }
+
+
     }
 
     //
