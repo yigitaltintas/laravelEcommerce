@@ -38,37 +38,14 @@
                             </div>
                             <!-- .handheld-sidebar-toggle -->
                             <h1 class="woocommerce-products-header__title page-title">Ürünler</h1>
-                            <ul role="tablist" class="shop-view-switcher nav nav-tabs">
-                                <li class="nav-item">
-                                    <a href="#grid" title="Grid View" data-toggle="tab" class="nav-link active">
-                                        <i class="tm tm-grid-small"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- .shop-view-switcher -->
-                            <form class="form-techmarket-wc-ppp" method="POST">
-                                <input type="hidden" value="5" name="shop_columns">
-                                <input type="hidden" value="15" name="shop_per_page">
-                                <input type="hidden" value="right-sidebar" name="shop_layout">
-                            </form>
-                            <!-- .form-techmarket-wc-ppp -->
-                            <form method="get" class="woocommerce-ordering">
-                                <select class="orderby" name="orderby">
-                                    <option value="popularity">Sort by popularity</option>
-                                    <option value="rating">Sort by average rating</option>
-                                    <option selected="selected" value="date">Sort by newness</option>
-                                    <option value="price">Sort by price: low to high</option>
-                                    <option value="price-desc">Sort by price: high to low</option>
-                                </select>
-                                <input type="hidden" value="5" name="shop_columns">
-                                <input type="hidden" value="15" name="shop_per_page">
-                                <input type="hidden" value="right-sidebar" name="shop_layout">
-                            </form>
-                            <!-- .woocommerce-ordering -->
+
+                            <div>
+                                <a href="?order=pahali" class="btn btn-info"> Once Pahali</a>
+                                <a href="?order=ucuz" class="btn btn-info"> Once Ucuz</a>
+                            </div>
+
                             <nav class="techmarket-advanced-pagination">
-                                <form class="form-adv-pagination" method="post">
-                                    <input type="number" value="1" class="form-control" step="1" max="5" min="1" size="2" id="goto-page">
-                                </form> of 5<a href="#" class="next page-numbers">→</a>
+                                {{ request()-> has('order') ? $urunler->appends(['order'=> request('order')])->links() :  $urunler -> links()}}
                             </nav>
                             <!-- .techmarket-advanced-pagination -->
                         </div>
@@ -111,16 +88,7 @@
                         <div class="shop-control-bar-bottom">
                             <!-- .woocommerce-result-count -->
                             <nav class="woocommerce-pagination">
-                                <ul class="page-numbers">
-                                    <li>
-                                        <span class="page-numbers current">1</span>
-                                    </li>
-                                    <li><a href="#" class="page-numbers">2</a></li>
-                                    <li><a href="#" class="page-numbers">3</a></li>
-                                    <li><a href="#" class="page-numbers">4</a></li>
-                                    <li><a href="#" class="page-numbers">5</a></li>
-                                    <li><a href="#" class="next page-numbers">→</a></li>
-                                </ul>
+                                {{ $urunler->links() }}
                                 <!-- .page-numbers -->
                             </nav>
                             <!-- .woocommerce-pagination -->

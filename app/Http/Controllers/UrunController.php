@@ -16,7 +16,7 @@ class UrunController extends Controller
 
     public function ara(){
         $s = request()->input('search');
-        $urunler = Urun::where('urun_adi', 'like', "%$s%")->get();
+        $urunler = Urun::where('urun_adi', 'like', "%$s%")->paginate(12);
         request()->flash();
         return view(config('app.theme_path').'.arama', compact('urunler' ));
     }
