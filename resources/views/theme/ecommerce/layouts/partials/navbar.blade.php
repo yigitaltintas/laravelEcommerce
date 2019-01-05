@@ -32,7 +32,17 @@
                 <a title="My Account" href="#">
                     <i class="tm tm-login-register"></i>Merhaba</a>
             </li>
-            @endauth
+
+            <li class="menu-item">
+                <a title="Oturum Kapat" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
+                    <i class="tm tm-close"></i>Oturum Kapat</a>
+                <form method="post" style="display:none" id="logout-form" action="{{ route('kullanici.cikis') }}">
+                    {{ csrf_field() }}
+                </form>
+            </li>
+
+
+                @endauth
         </ul>
         <!-- .nav -->
     </div>

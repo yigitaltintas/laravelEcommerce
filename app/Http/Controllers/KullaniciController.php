@@ -11,9 +11,17 @@ use Illuminate\Support\Str;
 
 class KullaniciController extends Controller
 {
-    //
+
+    public function __construct(){
+
+        $this->middleware('guest')->except('cikis');
+
+    }
+
     public function giris_form(){
+
         return view(config('app.theme_path').'.kullanici.giris');
+
     }
 
     public function giris(){
@@ -23,7 +31,7 @@ class KullaniciController extends Controller
             'sifre' => 'required|'
         ]);
 
-        if(auth()->attempt(['email' => request('email'), 'password' => request('sifre')])){
+        if(auth()->attempt(['email' => request('email'), 'password' => request('sifre')], request()->has('benihatirla') )){
 
             request()->session()->regenerate();
             return redirect()->intended('/');
@@ -35,10 +43,18 @@ class KullaniciController extends Controller
 
         }
 
+    }
+
+    public function cikis(){
+
+        auth()->logout();
+        request()->session()->flush();
+        request()->session()->regenerate();
+        return redirect()->route('anasayfa');
 
     }
 
-    //
+
     public function kayit_form(){
         return view(config('app.theme_path').'.kullanici.kayit');
     }
