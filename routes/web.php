@@ -39,4 +39,12 @@ Route::group(['prefix' => 'kullanici'], function(){
 
     Route::post('/kayit', 'KullaniciController@kaydol');
 
+    Route::get('/aktiflestir/{anahtar}', 'KullaniciController@aktiflestir')->name('aktiflestir');
+
+});
+
+
+Route::get('/test/mail', function (){
+    $kullanici = \App\Models\Kullanici::find(1);
+    return new App\Mail\KullaniciKayitMail($kullanici);
 });

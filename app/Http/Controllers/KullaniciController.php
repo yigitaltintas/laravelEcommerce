@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\KullaniciKayitMail;
 use App\Models\Kullanici;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class KullaniciController extends Controller
@@ -39,8 +41,29 @@ class KullaniciController extends Controller
             'aktif_mi'              => 0
         ]);
 
+        Mail::to(request('email'))->send(new KullaniciKayitMail($kullanici));
+
         auth()->login($kullanici);
 
         return redirect()->route('anasayfa');
+    }
+
+    public function aktiflestir($anahtar){
+
+        $kullanici = Kullanici::where('aktivasyon_anahtari', $anahtar)->first();
+        if(!is_null($kullanici)){
+
+            $kullanici -> aktivasyon_anahtari = null;
+            $kullanici -> aktif_mi = 1;
+            $kullanici -> save();
+
+            return redirect()->to('/')
+                ->with('mesaj', 'Üyeliğiniz aktifleştirildi.')
+                ->with('mesaj_tur', 'success');
+        }else{
+            return redirect()->to('/')
+                ->with('mesaj', 'Geçersiz aktivasyon işlemi.')
+                ->with('mesaj_tur', 'error');
+        }
     }
 }

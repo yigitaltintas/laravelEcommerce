@@ -1,6 +1,7 @@
 @extends('theme.ecommerce.layouts.master')
 @section('title', 'Anasayfa')
 @section('content')
+    @include('theme.ecommerce.layouts.partials.alert')
     <div id="content" class="site-content" tabindex="-1">
         <div class="col-full">
             <div class="row">
