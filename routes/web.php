@@ -21,9 +21,9 @@ Route::post('/ara', 'UrunController@ara')->name('urun-ara');
 
 Route::get('/ara', 'UrunController@ara')->name('urun-ara');
 
-Route::get('/sepet', 'SepetController@index')->name('sepet');
 
 Route::group(['middleware' => 'auth'], function (){
+
     Route::get('/odeme', 'OdemeController@index')->name('odeme');
 
     Route::get('/siparisler', 'SiparisController@index')->name('siparisler');
@@ -31,6 +31,12 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/siparisler/{id}', 'SiparisController@detay')->name('siparis');
 });
 
+Route::group(['prefix' => '/sepet'], function(){
+
+    Route::get('/', 'SepetController@index')->name('sepet');
+
+    Route::post('/ekle', 'SepetController@ekle')->name('sepet.ekle');
+});
 
 Route::group(['prefix' => 'kullanici'], function(){
 

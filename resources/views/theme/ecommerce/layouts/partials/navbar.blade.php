@@ -609,15 +609,6 @@
                 <!-- .input-group -->
             </form>
             <!-- .navbar-search -->
-            <ul class="header-compare nav navbar-nav">
-                <li class="nav-item">
-                    <a href="compare.html" class="nav-link">
-                        <i class="tm tm-compare"></i>
-                        <span id="top-cart-compare-count" class="value">3</span>
-                    </a>
-                </li>
-            </ul>
-            <!-- .header-compare -->
             <ul class="header-wishlist nav navbar-nav">
                 <li class="nav-item">
                     <a href="wishlist.html" class="nav-link">
@@ -629,11 +620,18 @@
             <!-- .header-wishlist -->
             <ul id="site-header-cart" class="site-header-cart menu">
                 <li class="animate-dropdown dropdown ">
-                    <a class="cart-contents" href="cart.html" data-toggle="dropdown" title="View your shopping cart">
+                    <a class="cart-contents" href="{{ route('sepet') }}" data-toggle="dropdown" title="View your shopping cart">
                         <i class="tm tm-shopping-bag"></i>
-                        <span class="count">2</span>
+                        <span class="count">{{ count(Cart::content())}}</span>
                         <span class="amount">
-                                        <span class="price-label">Sepet</span>136.99₺</span>
+                            <span class="price-label">Sepet</span>
+
+                            @if(count(Cart::content()) > 0)
+                                {{ Cart::subtotal() }}₺
+                            @else
+
+                            @endif
+                        </span>
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-mini-cart">
@@ -641,37 +639,36 @@
                             <div class="widget woocommerce widget_shopping_cart">
                                 <div class="widget_shopping_cart_content">
                                     <ul class="woocommerce-mini-cart cart_list product_list_widget ">
+                                        @foreach( Cart::content() as $urunCartItem)
                                         <li class="woocommerce-mini-cart-item mini_cart_item">
                                             <a href="#" class="remove" aria-label="Remove this item" data-product_id="65" data-product_sku="">×</a>
-                                            <a href="single-product-sidebar.html">
-                                                <img src="assets/images/products/mini-cart1.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">XONE Wireless Controller&nbsp;
+                                            <a href="{{ route('urun', $urunCartItem->options->slug) }}">
+                                                <img src="https://via.placeholder.com/180x180" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt=""> {{ $urunCartItem->name }}&nbsp;
                                             </a>
-                                            <span class="quantity">1 ×
+                                            <span class="quantity">{{ $urunCartItem->qty }} ×
                                                             <span class="woocommerce-Price-amount amount">
-                                                                <span class="woocommerce-Price-currencySymbol">$</span>64.99</span>
+                                                            {{ $urunCartItem->price }}    <span class="woocommerce-Price-currencySymbol">₺</span>
+                                                            </span>
                                                         </span>
                                         </li>
-                                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                                            <a href="#" class="remove" aria-label="Remove this item" data-product_id="27" data-product_sku="">×</a>
-                                            <a href="single-product-sidebar.html">
-                                                <img src="assets/images/products/mini-cart2.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">Gear Virtual Reality 3D with Bluetooth Glasses&nbsp;
-                                            </a>
-                                            <span class="quantity">1 ×
-                                                            <span class="woocommerce-Price-amount amount">
-                                                                <span class="woocommerce-Price-currencySymbol">$</span>72.00</span>
-                                                        </span>
-                                        </li>
+                                        @endforeach
                                     </ul>
+                                    @if( count(Cart::content()) > 0 )
                                     <!-- .cart_list -->
                                     <p class="woocommerce-mini-cart__total total">
-                                        <strong>Subtotal:</strong>
+                                        <strong>Ara Toplam:</strong>
                                         <span class="woocommerce-Price-amount amount">
-                                                        <span class="woocommerce-Price-currencySymbol">$</span>136.99</span>
+                                            {{ Cart::subtotal() }}
+                                            <span class="woocommerce-Price-currencySymbol">₺</span>
+                                        </span>
                                     </p>
                                     <p class="woocommerce-mini-cart__buttons buttons">
-                                        <a href="cart.html" class="button wc-forward">View cart</a>
-                                        <a href="checkout.html" class="button checkout wc-forward">Checkout</a>
+                                        <a href="{{ route('sepet') }}" class="button wc-forward">Sepete Git</a>
+                                        <a href="{{ route('odeme') }}" class="button checkout wc-forward">Alışverişi Tamamla</a>
                                     </p>
+                                    @else
+                                        <p class="woocommerce-mini-cart__total total"> Sepetiniz boş </p>
+                                        @endif
                                 </div>
                                 <!-- .widget_shopping_cart_content -->
                             </div>

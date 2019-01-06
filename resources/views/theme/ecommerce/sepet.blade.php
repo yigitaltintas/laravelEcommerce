@@ -6,7 +6,7 @@
         <div class="col-full">
             <div class="row">
                 <nav class="woocommerce-breadcrumb">
-                    <a href="home-v1.html">Home</a>
+                    <a href="home-v1.html">Anasayfa</a>
                     <span class="delimiter">
                                 <i class="tm tm-breadcrumbs-arrow-right"></i>
                             </span>
@@ -19,202 +19,135 @@
                             <div class="entry-content">
                                 <div class="woocommerce">
                                     <div class="cart-wrapper">
-                                        <form method="post" action="#" class="woocommerce-cart-form">
-                                            <table class="shop_table shop_table_responsive cart">
-                                                <thead>
-                                                <tr>
-                                                    <th class="product-remove">&nbsp;</th>
-                                                    <th class="product-thumbnail">&nbsp;</th>
-                                                    <th class="product-name">Product</th>
-                                                    <th class="product-price">Price</th>
-                                                    <th class="product-quantity">Quantity</th>
-                                                    <th class="product-subtotal">Total</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td class="product-remove">
-                                                        <a class="remove" href="#">×</a>
-                                                    </td>
-                                                    <td class="product-thumbnail">
-                                                        <a href="single-product-fullwidth.html">
-                                                            <img width="180" height="180" alt="" class="wp-post-image" src="single-product-fullwidth.html">
-                                                        </a>
-                                                    </td>
-                                                    <td data-title="Product" class="product-name">
-                                                        <div class="media cart-item-product-detail">
-                                                            <a href="single-product-fullwidth.html">
-                                                                <img width="180" height="180" alt="" class="wp-post-image" src="assets/images/products/cart-1.jpg">
-                                                            </a>
-                                                            <div class="media-body align-self-center">
-                                                                <a href="single-product-fullwidth.html">55" KU6470 6 Series UHD  Crystal Colour HDR Smart TV</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td data-title="Price" class="product-price">
-                                                                    <span class="woocommerce-Price-amount amount">
-                                                                        <span class="woocommerce-Price-currencySymbol">£</span>627.99
-                                                                    </span>
-                                                    </td>
-                                                    <td class="product-quantity" data-title="Quantity">
-                                                        <div class="quantity">
-                                                            <label for="quantity-input-1">Quantity</label>
-                                                            <input id="quantity-input-1" type="number" name="cart[e2230b853516e7b05d79744fbd4c9c13][qty]" value="1" title="Qty" class="input-text qty text" size="4">
-                                                        </div>
-                                                    </td>
-                                                    <td data-title="Total" class="product-subtotal">
-                                                                    <span class="woocommerce-Price-amount amount">
-                                                                        <span class="woocommerce-Price-currencySymbol">£</span>627.99
-                                                                    </span>
-                                                        <a title="Remove this item" class="remove" href="#">×</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="product-remove">
-                                                        <a class="remove" href="#">×</a>
-                                                    </td>
-                                                    <td class="product-thumbnail">
-                                                        <a href="single-product-fullwidth.html">
-                                                            <img width="180" height="180" alt="" class="wp-post-image" src="single-product-fullwidth.html">
-                                                        </a>
-                                                    </td>
-                                                    <td data-title="Product" class="product-name">
-                                                        <div class="media cart-item-product-detail">
-                                                            <a href="single-product-fullwidth.html">
-                                                                <img width="180" height="180" alt="" class="wp-post-image" src="assets/images/products/cart-2.jpg">
-                                                            </a>
-                                                            <div class="media-body align-self-center">
-                                                                <a href="single-product-fullwidth.html">4K Action Cam GPS</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td data-title="Price" class="product-price">
-                                                                    <span class="woocommerce-Price-amount amount">
-                                                                        <span class="woocommerce-Price-currencySymbol">£</span>627.99
-                                                                    </span>
-                                                    </td>
-                                                    <td class="product-quantity" data-title="Quantity">
-                                                        <div class="quantity">
-                                                            <label for="quantity-input-2">Quantity</label>
-                                                            <input id="quantity-input-2" type="number" name="cart[e2230b853516e7b05d79744fbd4c9c13][qty]" value="1" title="Qty" class="input-text qty text" size="4">
-                                                        </div>
-                                                    </td>
-                                                    <td data-title="Total" class="product-subtotal">
-                                                                    <span class="woocommerce-Price-amount amount">
-                                                                        <span class="woocommerce-Price-currencySymbol">£</span>627.99
-                                                                    </span>
-                                                        <a title="Remove this item" class="remove" href="#">×</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="product-remove">
-                                                        <a class="remove" href="#">×</a>
-                                                    </td>
-                                                    <td class="product-thumbnail">
-                                                        <a href="single-product-fullwidth.html">
-                                                            <img width="180" height="180" alt="" class="wp-post-image" src="single-product-fullwidth.html">
-                                                        </a>
-                                                    </td>
-                                                    <td data-title="Product" class="product-name">
-                                                        <div class="media cart-item-product-detail">
-                                                            <a href="single-product-fullwidth.html">
-                                                                <img width="180" height="180" alt="" class="wp-post-image" src="assets/images/products/cart-3.jpg">
-                                                            </a>
-                                                            <div class="media-body align-self-center">
-                                                                <a href="single-product-fullwidth.html">Bluetooth on-ear PureBass Headphones</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td data-title="Price" class="product-price">
-                                                                    <span class="woocommerce-Price-amount amount">
-                                                                        <span class="woocommerce-Price-currencySymbol">£</span>627.99
-                                                                    </span>
-                                                    </td>
-                                                    <td class="product-quantity" data-title="Quantity">
-                                                        <div class="quantity">
-                                                            <label for="quantity-input-3">Quantity</label>
-                                                            <input id="quantity-input-3" type="number" name="cart[e2230b853516e7b05d79744fbd4c9c13][qty]" value="1" title="Qty" class="input-text qty text" size="4">
-                                                        </div>
-                                                    </td>
-                                                    <td data-title="Total" class="product-subtotal">
-                                                                    <span class="woocommerce-Price-amount amount">
-                                                                        <span class="woocommerce-Price-currencySymbol">£</span>627.99
-                                                                    </span>
-                                                        <a title="Remove this item" class="remove" href="#">×</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="actions" colspan="6">
-                                                        <div class="coupon">
-                                                            <label for="coupon_code">Coupon:</label>
-                                                            <input type="text" placeholder="Coupon code" value="" id="coupon_code" class="input-text" name="coupon_code">
-                                                            <input type="submit" value="Apply coupon" name="apply_coupon" class="button">
-                                                        </div>
-                                                        <input type="submit" value="Update cart" name="update_cart" class="button">
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                            <!-- .shop_table shop_table_responsive -->
-                                        </form>
-                                        <!-- .woocommerce-cart-form -->
-                                        <div class="cart-collaterals">
-                                            <div class="cart_totals">
-                                                <h2>Cart totals</h2>
-                                                <table class="shop_table shop_table_responsive">
+
+                                        @include('theme.ecommerce.layouts.partials.alert')
+
+                                        @if(count(Cart::content()) > 0)
+                                            <form method="post" action="#" class="woocommerce-cart-form">
+                                                <table class="shop_table shop_table_responsive cart">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="product-remove">&nbsp;</th>
+                                                        <th class="product-thumbnail">&nbsp;</th>
+                                                        <th class="product-name">Ürün Adı</th>
+                                                        <th class="product-price">Fiyat</th>
+                                                        <th class="product-quantity">Adet</th>
+                                                        <th class="product-subtotal">Toplam</th>
+                                                    </tr>
+                                                    </thead>
                                                     <tbody>
-                                                    <tr class="cart-subtotal">
-                                                        <th>Subtotal</th>
-                                                        <td data-title="Subtotal">
-                                                                        <span class="woocommerce-Price-amount amount">
-                                                                            <span class="woocommerce-Price-currencySymbol">£</span>963.94</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="shipping">
-                                                        <th>Shipping</th>
-                                                        <td data-title="Shipping">Flat rate</td>
-                                                    </tr>
-                                                    <tr class="order-total">
-                                                        <th>Total</th>
-                                                        <td data-title="Total">
-                                                            <strong>
-                                                                            <span class="woocommerce-Price-amount amount">
-                                                                                <span class="woocommerce-Price-currencySymbol">£</span>963.94</span>
-                                                            </strong>
-                                                        </td>
-                                                    </tr>
+                                                    @foreach(Cart::content() as $urunCartItem)
+                                                        <tr>
+                                                            <td class="product-remove">
+                                                                <a class="remove" href="#">×</a>
+                                                            </td>
+                                                            <td class="product-thumbnail">
+                                                                <a href="">
+                                                                    <img width="180" height="180" alt="" class="wp-post-image" src="https://via.placeholder.com/180x180">
+                                                                </a>
+                                                            </td>
+                                                            <td data-title="Product" class="product-name">
+                                                                <div class="media cart-item-product-detail">
+                                                                    <a href="{{ route('urun', $urunCartItem->options->slug) }}">
+                                                                        <img width="180" height="180" alt="" class="wp-post-image" src="https://via.placeholder.com/180x180">
+                                                                    </a>
+                                                                    <div class="media-body align-self-center">
+                                                                        <a href="{{route('urun', $urunCartItem->options->slug)}}">{{ $urunCartItem -> name }}</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td data-title="Price" class="product-price">
+                                                                    <span class="woocommerce-Price-amount amount">
+                                                                        {{ $urunCartItem -> price }}<span class="woocommerce-Price-currencySymbol">₺</span>
+                                                                    </span>
+                                                            </td>
+                                                            <td class="product-quantity" data-title="Quantity">
+                                                                <div class="quantity">
+                                                                    <label for="quantity-input-1">Quantity</label>
+                                                                    <input id="quantity-input-1" type="number" name="cart[e2230b853516e7b05d79744fbd4c9c13][qty]" value="{{ $urunCartItem -> qty }}" title="Qty" class="input-text qty text" size="4">
+                                                                </div>
+                                                            </td>
+                                                            <td data-title="Total" class="product-subtotal">
+                                                                    <span class="woocommerce-Price-amount amount">
+                                                                        {{ $urunCartItem -> subtotal }}<span class="woocommerce-Price-currencySymbol">₺</span>
+                                                                    </span>
+                                                                <a title="Remove this item" class="remove" href="#">×</a>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
                                                     </tbody>
                                                 </table>
                                                 <!-- .shop_table shop_table_responsive -->
-                                                <div class="wc-proceed-to-checkout">
-                                                    <form class="woocommerce-shipping-calculator" method="post" action="#">
-                                                        <p>
-                                                            <a class="shipping-calculator-button" data-toggle="collapse" href="#shipping-form" aria-expanded="false" aria-controls="shipping-form">Calculate shipping</a>
-                                                        </p>
-                                                        <div class="collapse" id="shipping-form">
-                                                            <div class="shipping-calculator-form">
-                                                                <p id="calc_shipping_country_field" class="form-row form-row-wide">
-                                                                    <select rel="calc_shipping_state" class="country_to_state" id="calc_shipping_country" name="calc_shipping_country">
-                                                                        <option value="">Select a country…</option>
-                                                                        <option value="AX">Åland Islands</option>
-                                                                        <option value="AF">Afghanistan</option>
-                                                                        <option value="AL">Albania</option>
-                                                                        <option value="DZ">Algeria</option>
-                                                                        <option value="AS">American Samoa</option>
-                                                                        <option value="AD">Andorra</option>
-                                                                        <option value="AO">Angola</option>
-                                                                        <option value="AI">Anguilla</option>
-                                                                        <option value="AQ">Antarctica</option>
-                                                                        <option value="AG">Antigua and Barbuda</option>
-                                                                        <option value="AR">Argentina</option>
-                                                                        <option value="AM">Armenia</option>
-                                                                        <option value="AW">Aruba</option>
-                                                                        <option value="AU">Australia</option>
-                                                                        <option value="AT">Austria</option>
-                                                                        <option value="AZ">Azerbaijan</option>
-                                                                    </select>
-                                                                </p>
-                                                                <p id="calc_shipping_state_field" class="form-row form-row-wide validate-required">
+                                            </form>
+                                            <!-- .woocommerce-cart-form -->
+                                            <div class="cart-collaterals">
+                                                <div class="cart_totals">
+
+                                                    <h2>Sepet Toplamı</h2>
+                                                    <table class="shop_table shop_table_responsive">
+                                                        <tbody>
+                                                        <tr class="cart-subtotal">
+                                                            <th>Ara Toplam</th>
+                                                            <td data-title="Subtotal">
+                                                                        <span class="woocommerce-Price-amount amount">
+                                                                        {{ Cart::subtotal() }}    <span class="woocommerce-Price-currencySymbol">₺</span>
+                                                                        </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="cart-subtotal">
+                                                            <th>KDV</th>
+                                                            <td data-title="Subtotal">
+                                                                        <span class="woocommerce-Price-amount amount">
+                                                                        {{ Cart::tax() }}    <span class="woocommerce-Price-currencySymbol">₺</span>
+                                                                        </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="shipping">
+                                                            <th>Kargo</th>
+                                                            <td data-title="Shipping">MNG Kargo</td>
+                                                        </tr>
+                                                        <tr class="order-total">
+                                                            <th>Toplam</th>
+                                                            <td data-title="Total">
+                                                                <strong>
+                                                                            <span class="woocommerce-Price-amount amount">
+                                                                            {{ Cart::total() }}    <span class="woocommerce-Price-currencySymbol">₺</span>
+                                                                            </span>
+                                                                </strong>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- .shop_table shop_table_responsive -->
+                                                    <div class="wc-proceed-to-checkout">
+                                                        <form class="woocommerce-shipping-calculator" method="post" action="#">
+                                                            <p>
+                                                                <a class="shipping-calculator-button" data-toggle="collapse" href="#shipping-form" aria-expanded="false" aria-controls="shipping-form">Calculate shipping</a>
+                                                            </p>
+                                                            <div class="collapse" id="shipping-form">
+                                                                <div class="shipping-calculator-form">
+                                                                    <p id="calc_shipping_country_field" class="form-row form-row-wide">
+                                                                        <select rel="calc_shipping_state" class="country_to_state" id="calc_shipping_country" name="calc_shipping_country">
+                                                                            <option value="">Select a country…</option>
+                                                                            <option value="AX">Åland Islands</option>
+                                                                            <option value="AF">Afghanistan</option>
+                                                                            <option value="AL">Albania</option>
+                                                                            <option value="DZ">Algeria</option>
+                                                                            <option value="AS">American Samoa</option>
+                                                                            <option value="AD">Andorra</option>
+                                                                            <option value="AO">Angola</option>
+                                                                            <option value="AI">Anguilla</option>
+                                                                            <option value="AQ">Antarctica</option>
+                                                                            <option value="AG">Antigua and Barbuda</option>
+                                                                            <option value="AR">Argentina</option>
+                                                                            <option value="AM">Armenia</option>
+                                                                            <option value="AW">Aruba</option>
+                                                                            <option value="AU">Australia</option>
+                                                                            <option value="AT">Austria</option>
+                                                                            <option value="AZ">Azerbaijan</option>
+                                                                        </select>
+                                                                    </p>
+                                                                    <p id="calc_shipping_state_field" class="form-row form-row-wide validate-required">
                                                                             <span>
                                                                                 <select id="calc_shipping_state" name="calc_shipping_state">
                                                                                     <option value="">Select an option…</option>
@@ -256,26 +189,29 @@
                                                                                     <option value="PY">Pondicherry (Puducherry)</option>
                                                                                 </select>
                                                                             </span>
-                                                                </p>
-                                                                <p id="calc_shipping_postcode_field" class="form-row form-row-wide validate-required">
-                                                                    <input type="text" id="calc_shipping_postcode" name="calc_shipping_postcode" placeholder="Postcode / ZIP" value="" class="input-text">
-                                                                </p>
-                                                                <p>
-                                                                    <button class="button" value="1" name="calc_shipping" type="submit">Update totals</button>
-                                                                </p>
+                                                                    </p>
+                                                                    <p id="calc_shipping_postcode_field" class="form-row form-row-wide validate-required">
+                                                                        <input type="text" id="calc_shipping_postcode" name="calc_shipping_postcode" placeholder="Postcode / ZIP" value="" class="input-text">
+                                                                    </p>
+                                                                    <p>
+                                                                        <button class="button" value="1" name="calc_shipping" type="submit">Update totals</button>
+                                                                    </p>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </form>
+                                                        </form>
+                                                        <!-- .wc-proceed-to-checkout -->
+                                                        <a class="checkout-button button alt wc-forward" href="checkout.html">
+                                                            Proceed to checkout</a>
+                                                        <a class="back-to-shopping" href="shop.html">Back to Shopping</a>
+                                                    </div>
                                                     <!-- .wc-proceed-to-checkout -->
-                                                    <a class="checkout-button button alt wc-forward" href="checkout.html">
-                                                        Proceed to checkout</a>
-                                                    <a class="back-to-shopping" href="shop.html">Back to Shopping</a>
                                                 </div>
-                                                <!-- .wc-proceed-to-checkout -->
+                                                <!-- .cart_totals -->
                                             </div>
-                                            <!-- .cart_totals -->
-                                        </div>
-                                        <!-- .cart-collaterals -->
+                                            <!-- .cart-collaterals -->
+                                        @else
+                                            <h2>Sepetinizde ürün bulunamadı.</h2>
+                                        @endif
                                     </div>
                                     <!-- .cart-wrapper -->
                                 </div>
