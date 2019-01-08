@@ -36,6 +36,9 @@ Route::group(['prefix' => '/sepet'], function(){
     Route::get('/', 'SepetController@index')->name('sepet');
 
     Route::post('/ekle', 'SepetController@ekle')->name('sepet.ekle');
+
+    Route::delete('/kaldir/{row_id}', 'SepetController@kaldir')->name('sepet.kaldir');
+
 });
 
 Route::group(['prefix' => 'kullanici'], function(){

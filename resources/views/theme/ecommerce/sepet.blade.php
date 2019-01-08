@@ -39,7 +39,12 @@
                                                     @foreach(Cart::content() as $urunCartItem)
                                                         <tr>
                                                             <td class="product-remove">
-                                                                <a class="remove" href="#">×</a>
+                                                                <form action="{{ route('sepet.kaldir', $urunCartItem->rowId) }}" method="post">
+                                                                    {{ csrf_field() }}
+                                                                    {{ method_field('DELETE') }}
+                                                                    <button class="remove" type="submit">×</button>
+                                                                </form>
+
                                                             </td>
                                                             <td class="product-thumbnail">
                                                                 <a href="">
