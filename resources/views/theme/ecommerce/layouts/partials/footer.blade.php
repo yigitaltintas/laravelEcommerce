@@ -303,3 +303,4 @@
 <script type="text/javascript" src="/theme/ecommerce/js/pace.min.js"></script>
 <script type="text/javascript" src="/theme/ecommerce/js/slick.min.js"></script>
 <script type="text/javascript" src="/theme/ecommerce/js/scripts.js"></script>
+<script type="text/javascript" src="/theme/ecommerce/js/app.js"></script>

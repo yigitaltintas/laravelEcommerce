@@ -1,3 +1,4 @@
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="/theme/ecommerce/css/bootstrap.min.css" media="all" />
 <link rel="stylesheet" type="text/css" href="/theme/ecommerce/css/font-awesome.min.css" media="all" />

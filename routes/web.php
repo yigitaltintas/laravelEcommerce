@@ -41,6 +41,8 @@ Route::group(['prefix' => '/sepet'], function(){
 
     Route::delete('/bosalt', 'SepetController@bosalt')->name('sepet.bosalt');
 
+    Route::patch('/guncelle/{row_id}', 'SepetController@guncelle')->name('sepet.guncelle');
+
 });
 
 Route::group(['prefix' => 'kullanici'], function(){
