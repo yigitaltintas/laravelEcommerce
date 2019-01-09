@@ -645,11 +645,11 @@
                                             <a href="{{ route('urun', $urunCartItem->options->slug) }}">
                                                 <img src="https://via.placeholder.com/180x180" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt=""> {{ $urunCartItem->name }}&nbsp;
                                             </a>
-                                            <span class="quantity">{{ $urunCartItem->qty }}
+                                            <span class="quantity">{{ $urunCartItem->qty }} adet
                                                 <form action="{{ route('sepet.kaldir', $urunCartItem->rowId) }}" method="post">
                                                     {{ csrf_field() }}
                                                     {{ method_field('DELETE') }}
-                                                    <button class="remove" type="submit">×</button>
+                                                    <button class="remove" type="submit">X</button>
                                                 </form>
 
                                                             <span class="woocommerce-Price-amount amount">
