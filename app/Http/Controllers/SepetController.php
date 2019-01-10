@@ -50,13 +50,33 @@ class SepetController extends Controller
     }
 
     public function kaldir($row_id){
+
+        if(auth()->check()){
+
+            $aktif_sepet_id = session('aktif_sepet_id');
+            $cartItem = Cart::get($row_id);
+
+            SepetUrun::where('sepet_id', $aktif_sepet_id)->where('urun_id', $cartItem->id)->delete();
+
+        }
+
         Cart::remove($row_id);
+
         return redirect()->route('sepet')
             ->with('mesaj_tur', 'success')
             ->with('mesaj', 'Ürün sepetten kaldırıldı.');
     }
 
     public function bosalt(){
+
+        if(auth()->check()){
+
+            $aktif_sepet_id = session('aktif_sepet_id');
+
+            SepetUrun::where('sepet_id', $aktif_sepet_id)->delete();
+
+        }
+
         Cart::destroy();
         return redirect()->route('sepet')
             ->with('mesaj_tur', 'success')

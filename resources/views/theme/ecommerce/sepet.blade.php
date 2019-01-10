@@ -76,10 +76,10 @@
                                                                     <span class="woocommerce-Price-amount amount">
                                                                         {{ $urunCartItem -> subtotal }}<span class="woocommerce-Price-currencySymbol">₺</span>
                                                                     </span>
-                                                                <form action="" method="POST">
+                                                                <form action="{{ route('sepet.kaldir', $urunCartItem->rowId) }}" method="POST">
                                                                     {{ csrf_field() }}
                                                                     {{ method_field('DELETE') }}
-                                                                    <button class="remove">×</button>
+                                                                    <button type="submit" class="remove">×</button>
                                                                 </form>
                                                             </td>
                                                         </tr>
