@@ -16,4 +16,7 @@ class SepetUrun extends Model
     const UPDATED_AT = 'guncellenme_tarihi';
     const DELETED_AT = 'silinme_tarihi';
 
+    public function urun(){
+        return $this->belongsTo('App\Models\Urun');
+    }
 }
