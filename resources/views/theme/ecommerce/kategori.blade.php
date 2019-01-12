@@ -71,7 +71,12 @@
                                             </a>
                                             <!-- .woocommerce-LoopProduct-link -->
                                             <div class="hover-area">
-                                                <a class="button" href="cart.html">Sepete Ekle</a>
+                                                <form action="{{ route('sepet.ekle') }}" method="POST">
+                                                    {{ csrf_field() }}
+                                                    <input type="hidden" name="adet" value="1">
+                                                    <input type="hidden" name="id" value="{{ $urun -> id }}">
+                                                    <button class="button" type="submit">Sepete Ekle</button>
+                                                </form>
                                             </div>
                                             <!-- .hover-area -->
                                         </div>

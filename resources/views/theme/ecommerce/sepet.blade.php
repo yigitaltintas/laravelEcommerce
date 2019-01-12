@@ -129,7 +129,7 @@
                                                     </table>
                                                     <!-- .shop_table shop_table_responsive -->
                                                     <div class="wc-proceed-to-checkout">
-                                                        <a class="checkout-button button alt wc-forward" href="checkout.html">
+                                                        <a class="checkout-button button alt wc-forward" href="{{ route('odeme') }}">
                                                             Alışverişi Tamamla</a>
                                                         <form action="{{ route('sepet.bosalt') }}" method="POST">
                                                             {{ csrf_field() }}

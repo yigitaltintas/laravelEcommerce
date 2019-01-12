@@ -21,10 +21,10 @@ Route::post('/ara', 'UrunController@ara')->name('urun-ara');
 
 Route::get('/ara', 'UrunController@ara')->name('urun-ara');
 
+Route::get('/odeme', 'OdemeController@index')->name('odeme');
+
 /* Auth */
 Route::group(['middleware' => 'auth'], function (){
-
-    Route::get('/odeme', 'OdemeController@index')->name('odeme');
 
     Route::get('/siparisler', 'SiparisController@index')->name('siparisler');
 

@@ -22,6 +22,7 @@
                                             <div class="col-md-8">
                                                 <h2>Giris Yap</h2>
                                                 @include('theme.ecommerce.layouts.partials.error')
+                                                @include('theme.ecommerce.layouts.partials.alert')
                                                 <form  method="POST" action=" {{ route('kullanici.giris') }} ">
                                                     {{ csrf_field() }}
                                                     <p class="before-register-text">
