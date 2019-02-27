@@ -9,7 +9,7 @@ class KullaniciDetay extends Model
 {
 
     protected $table = 'kullanici_detay';
-    protected $timestamp = false;
+    public $timestamp = false;
     protected $guarded = [];
 
     public function kullanici(){

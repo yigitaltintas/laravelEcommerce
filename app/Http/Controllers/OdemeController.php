@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 
+
 class OdemeController extends Controller
 {
     //
@@ -24,6 +25,8 @@ class OdemeController extends Controller
 
         }
 
-        return view(config('app.theme_path').'.odeme');
+        $kullanici_detay = auth()-> user()-> detay;
+
+        return view(config('app.theme_path').'.odeme', compact('kullanici_detay'));
     }
 }
