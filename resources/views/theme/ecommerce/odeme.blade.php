@@ -18,7 +18,8 @@
                         <div class="type-page hentry">
                             <div class="entry-content">
                                 <div class="woocommerce">
-                                    <form action="{{ route('odemeyap') }}" class="checkout woocommerce-checkout" method="post" name="checkout">
+                                    <form action="{{ route('odemeyap') }}" class="checkout woocommerce-checkout" method="POST" name="checkout">
+                                        {{ csrf_field() }}
                                         <div id="customer_details" class="col2-set">
                                             <div class="col-1">
                                                 <div class="woocommerce-billing-fields">
@@ -29,12 +30,12 @@
                                                                 <label class="" for="billing_first_name">İsim
                                                                     <abbr title="required" class="required">*</abbr>
                                                                 </label>
-                                                                <input type="text" value="{{ auth()->user()->adsoyad }}" placeholder="" id="billing_first_name" name="isim" class="input-text ">
+                                                                <input type="text" value="{{ auth()->user()->adsoyad }}" placeholder="" id="billing_first_name" name="adsoyad" class="input-text ">
                                                             </p>
                                                             <div class="clear"></div>
                                                             <p id="billing_company_field" class="form-row form-row-wide">
                                                                 <label class="" for="billing_company">Telefon</label>
-                                                                <input type="text" value="{{ $kullanici_detay -> cep_telefonu  }}" placeholder="" id="billing_company" name="telefon" class="input-text ">
+                                                                <input type="text" value="{{ $kullanici_detay -> cep_telefonu  }}" placeholder="" id="billing_company" name="ceptelefonu" class="input-text ">
                                                             </p>
                                                             <div class="clear"></div>
                                                             <p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
@@ -106,7 +107,7 @@
                                                             </label>
                                                             <input type="hidden" value="1" name="terms-field">
                                                         </p>
-                                                        <a href="order-received.html" class="button wc-forward text-center">Ödemeyi Tamamla</a>
+                                                        <button type="submit" class="button wc-forward text-center">Ödemeyi Tamamla</button>
                                                     </div>
                                                 </div>
                                                 <!-- /.woocommerce-checkout-payment -->

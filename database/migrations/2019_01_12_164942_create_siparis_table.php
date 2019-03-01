@@ -16,8 +16,13 @@ class CreateSiparisTable extends Migration
         Schema::create('siparis', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('sepet_id')->unsigned();
-            $table->decimal('siparis_tutari', 5, 4);
+            $table->decimal('siparis_tutari', 10, 4);
             $table->string('durum', 30)->nullable();
+
+            $table->string('adsoyad', 50)->nullable();
+            $table->string('adres', 200)->nullable();
+            $table->string('ceptelefonu', 15)->nullable();
+            $table->decimal('taksitsayisi', 15)->nullable();
             $table->string('banka', 30)->nullable();
 
             $table->timestamp('olusturulma_tarihi')->default(DB::raw('CURRENT_TIMESTAMP'));

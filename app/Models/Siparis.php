@@ -15,8 +15,11 @@ class Siparis extends Model
     protected $fillable = [
         'sepet_id',
         'siparis_tutari',
+        'adsoyad',
+        'adres',
+        'ceptelefonu',
         'banka',
-        'taksit_sayisi',
+        'taksitsayisi',
         'durum'
     ];
 

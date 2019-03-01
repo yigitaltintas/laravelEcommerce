@@ -23,7 +23,7 @@ Route::get('/ara', 'UrunController@ara')->name('urun-ara');
 
 Route::get('/odeme', 'OdemeController@index')->name('odeme');
 
-Route::get('/odemeyap', 'OdemeController@odemeyap')->name('odemeyap');
+Route::post('/odemeyap', 'OdemeController@odemeyap')->name('odemeyap');
 
 /* Auth */
 Route::group(['middleware' => 'auth'], function (){
